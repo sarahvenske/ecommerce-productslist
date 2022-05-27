@@ -1,107 +1,193 @@
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* CABEÇALHO */
-.filtersContainer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px;
-}
-
-.estiloGeralBotoes{
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: block;
-    font-size: 0.9rem;
-}
-
-.estiloGeralBotoes--mostrarTodos {
-    color: black;
-    background-color: #d3d3d3;
-}
-
-.estiloGeralBotoes--filtrarHortifruti {
-    background-color: tomato;
-    color: white;
-}
-
-.containerBuscaPorNome {
-    display: flex;
-    justify-content: space-between;
-}
-
-.campoBuscaPorNome {
-    border-radius: 5px 0 0 5px;
-    border: 1px solid black;
-    padding: 0 10px;
-}
-
-.estiloGeralBotoes--botaoBuscaPorNome {
-    background-color: rgb(17, 17, 20);
-    color: white;
-    border-radius: 0 5px 5px 0;
-}
-
-/* CONTEÚDO */
-main{}
-
-.containerListaProdutos {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.containerListaProdutos ul {
-    list-style: none;
+/* Estilização primeiro box: título */
+.title{
+    box-shadow: 0px 4px 30px -10px rgb(0 0 0 / 25%);
+    align-items: center; 
+    height: 70px;
     text-align: center;
-    display: flex;
-    justify-content: center;
+    
 }
 
-.containerListaProdutos ul li {
-    color: black;
-    font-weight: bold;
+.title_text{
     padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    transition: ease-in-out .1s;
-    width: 20%;
-}
-
-.containerListaProdutos ul li:hover {
-    box-shadow: 3px 3px 13px 1px rgb(146 146 146);
-}
-
-.containerListaProdutos ul li img {
-    width: 100%;
-    max-width: 80px;
-}
-
-.containerListaProdutos ul li h3 {
-    font-size: 1.5rem;
-}
-
-.containerListaProdutos ul li p {
-    font-size: 1.5rem;
-}
-.containerListaProdutos ul li span {
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-/* PREÇO TOTAL */
-.containerPrecoTotal{
-    text-align: center;
-}
-.containerPrecoTotal p{
-    font-size: 1.4rem;
     font-weight: 600;
+    font-size: 20px;
 }
-.containerPrecoTotal p span{}
+
+/* Estilização segundo box: tags e campo de pesquisa */
+.section_tags{
+    margin-top: 35px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-left: 150px;  
+    margin-right: 150px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row; 
+  
+}
+
+nav ul li{
+    padding-right: 20px;
+}
+
+.btn_all{
+    background-color: #12B886;
+    border: 1px solid #12B886;
+    color: white;
+    border-radius: 8px;
+    width: 177px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.btn_others{
+    background-color: #e3f7f1;
+    border: 1px solid #e6edeb;
+    color: #12B886;
+    border-radius: 8px;
+    width: 177px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.search_field{
+    background-color: #e6edeb;
+    border: 1px solid #e6edeb;
+    color: #515252;
+    border-radius: 8px;
+    width: 324px;
+    height: 52px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.search_button{
+    background-color: #12B886;
+    border: 1px solid #12B886;
+    color: white;
+    border-radius: 8px;
+    width: 59px;
+    height: 52px;
+    font-size: 20px;
+}
+
+/* Estilização terceiro box: valor total produtos  */
+
+.section_total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 30px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    height: 56px;
+}
+
+.total_text{
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.box_total_value{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 34px;
+    background-color: black ;
+    border-radius: 8px;
+    color: white;
+    margin-right: 15px;
+    text-align: center;
+    
+
+}
+
+/* Estilização quarto box: cards de produtos  */
+
+.section_cards{
+    margin-top: 35px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.tagUl{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 274px;
+    height: 350px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+/* Estilização itens dentro do card */
+
+.figure{
+    width: 274px;
+    height: 175px ;
+    align-items: center;
+    align-content: center;
+    border-radius: 8px;
+   
+}
+
+.img{
+    width: 274px;
+    height: 175px ;
+    border-radius: 8px;
+}
+
+.card .nome{
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #212529;
+
+}
+
+.card .tag{
+    font-weight: 400;
+    font-size: 15px;   
+    color: #868E96;
+ 
+}
+
+.card .preco{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #212529
+}

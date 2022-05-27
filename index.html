@@ -4,52 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Inter:wght@500;600;700;800;900&family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <title>Lista de Produtos</title>
 </head>
 <body>
-
-    <!-- CABEÇALHO -->
-    <header>
-        <div id="filters" class="filtersContainer">
-            
-            <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">Mostrar Todos</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">Mostrar Hortifruti</button>
-
-            <div class="containerBuscaPorNome">
-                
-                <input type="text" placeholder="Nome do produto" class="campoBuscaPorNome">
-                <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome">Buscar</button>
-
-            </div>
-        </div>
+    <header class="title">
+        <h3 class="title_text">Shop Now</h3>
     </header>
-    
+
     <main>
-        <div class="containerListaProdutos" id="listProdutos">
-            <ul>
-            <!-- Utilize esse item html como template para a construção da lista de produtos -->
+        <section class="section_tags">
+            <nav class="nav_tags">
+                <ul>
+                    <li>
+                        <button id= "btn_todos_produtos" class= "btn_all" type="button">Todos Produtos</button>
+                    </li>
+                    <li>
+                        <button id= "btn_hortifruti" class= "btn_others" type="button">Hortifruti</button>
+                    </li>
+                    <li>
+                        <button id= "btn_panificadora"  class= "btn_others" type="button">Panificadora</button>
+                    </li>
+                    <li>
+                        <button id= "btn_laticinios" class= "btn_others" type="button">Laticínios</button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="form_field">
+                <input type="text" placeholder="Pesquisar por" class="search_field">
+                <button class="search_button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </section>
 
-            <!-- Você pode remover esses comentários depois que fizer a construção pelo DOM -->
+        <section class="section_total">
+            <div class="total_text">
+                <p>Valor total dos produtos da sessão selecionada</p>
+            </div>
+            <div class="box_total_value">
+            </div>    
+        </section>
 
-            <!--
-                <li>
-                    <img src="./src/img/maça.png" alt="Imagem maçã">
-                    <h3>Maçã</h3>
-                    <p>R$02.00</p>
-                    <span>Seção - Hortifruti</span>
-                </li>
-            -->
-            </ul>
-        </div>
-
-        <div class="containerPrecoTotal">
-            <p>Preço total: R$<span id="precoTotal">00.00</span></p>
-        </div>
+        <section class="section_cards"></section>
+        
     </main>
 
+    <script src="https://kit.fontawesome.com/68b7bd4f8a.js" crossorigin="anonymous"></script>
     <script src="src/js/dataProdutos.js"></script>
     <script src="src/js/script.js"></script>
+
 </body>
 </html>
