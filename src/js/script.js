@@ -1,7 +1,5 @@
 const sectionCards = document.querySelector('.section_cards')
 
-let arrayProdutosSelecionados = []
-
 
 //Criação dinâmica dos cards de produtos:
 
@@ -38,17 +36,30 @@ function renderCard(listaProdutos){
         card.append(divImg, nome, tag, preco)
         ul.append(card)
         
+        //Função soma - total de valores produtos selecionados
         
-        //Evento adicionado ao card:
+        const total = document.querySelector('.box_total_value')
+        total.innerText = "R$0,00"
         
-        function addProduto (){
+        function valorTotal(listaProdutos){
             
-            arrayProdutosSelecionados.push(listaProdutos[i])
+            let soma = 0
+            total.innerHTML = " "
             
-            valorTotal()
+            for(let i=0; i< listaProdutos.length; i++){
+                soma += listaProdutos[i].preco
+            }
+        
+            const valorSoma = document.createElement('div')
+            valorSoma.className = "valorSoma"
+            valorSoma.innerText = soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+    
+            total.append(valorSoma)
+        
         }
-        
-        card.addEventListener("click", addProduto)
+    
+        valorTotal(listaProdutos)
+
     }
     
     sectionCards.append(ul)
@@ -56,30 +67,6 @@ function renderCard(listaProdutos){
 
 renderCard(produtos)
 
-//Função soma - total de valores produtos selecionados
-
-const total = document.querySelector('.box_total_value')
-total.innerText = "R$0,00"
-
-function valorTotal(){
-    
-    let soma = 0
-    
-    if(arrayProdutosSelecionados.length > 0){
-        
-        total.innerHTML = " "
-
-        for(let i = 0; i < arrayProdutosSelecionados.length; i++ ){
-            soma += arrayProdutosSelecionados[i].preco
-        }
-
-        const valorSoma = document.createElement('div')
-        valorSoma.className = "valorSoma"
-        valorSoma.innerText = soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
-
-        total.append(valorSoma)
-    }
-}
 
 //Filtro tag Todos os Produtos:
 
@@ -91,7 +78,6 @@ function retornarTodos(){
         return produtos
     })
     renderCard(produtosFiltrados) 
-
 }
 
 const tagTodosProdutos = document.querySelector("#btn_todos_produtos")
@@ -107,6 +93,7 @@ function filtrarHortifruti(){
         return produto.secao === "Hortifruti"
     })
     renderCard(produtosFiltrados) 
+
 }
 
 const tagHortifruti = document.querySelector("#btn_hortifruti")

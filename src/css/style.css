@@ -50,6 +50,12 @@ nav ul li{
     height: 52px;
     font-weight: 500;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.btn_all:hover{
+    background-color: #e3f7f1;
+    color: #12B886;
 }
 
 .btn_others{
@@ -61,8 +67,19 @@ nav ul li{
     height: 52px;
     font-weight: 500;
     font-size: 16px;
+    cursor: pointer;
 }
 
+.btn_others:hover{
+    background-color: #12B886;
+    color: #e3f7f1;
+}
+
+.form_field{
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+}
 .search_field{
     background-color: #e6edeb;
     border: 1px solid #e6edeb;
@@ -74,6 +91,9 @@ nav ul li{
     font-size: 16px;
 }
 
+.search_field:hover{
+    border: 1px solid grey;
+}
 .search_button{
     background-color: #12B886;
     border: 1px solid #12B886;
@@ -82,6 +102,7 @@ nav ul li{
     width: 59px;
     height: 52px;
     font-size: 20px;
+    margin-left: 20px;
 }
 
 /* Estilização terceiro box: valor total produtos  */
