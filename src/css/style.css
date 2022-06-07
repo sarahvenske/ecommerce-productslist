@@ -144,6 +144,12 @@ nav ul li{
 
 /* Estilização quarto box: cards de produtos  */
 
+.container_cards_cart{
+    display: flex;
+    flex-direction: row;
+}
+
+
 .section_cards{
     margin-top: 35px;
     margin-left: 150px;
@@ -158,7 +164,6 @@ nav ul li{
     flex-wrap: wrap;
 }
 
-
 .card{
     display: flex;
     flex-direction: column;
@@ -168,10 +173,6 @@ nav ul li{
     height: 350px;
     border-radius: 8px;
     margin: 10px;
-}
-
-.card:hover{
-    transform: scale(1.05);
 }
 
 /* Estilização itens dentro do card */
@@ -200,15 +201,171 @@ nav ul li{
 }
 
 .card .tag{
+
     font-weight: 400;
     font-size: 15px;   
     color: #868E96;
  
 }
 
+.card .nutrientes{
+    font-weight: 400;
+    font-size: 12px;   
+    color: #868E96;
+}
+
+.card .span_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 274px;
+}
+
 .card .preco{
     font-weight: 500;
     font-size: 15px;
-    margin-bottom: 10px;
     color: #212529
+}
+
+.card .botao_comprar{
+    background: rgba(18, 184, 134, 0.05);
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    color: #12B886;
+    border-radius: 8px;
+    width: 71px;
+    height: 29px;
+    font-weight: 500;
+    font-size: 11px;
+    cursor: pointer;
+    
+}
+
+.botao_comprar:hover{
+    transform: scale(1.2);
+}
+
+/* Estilização Aside */
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-right: 200px;
+
+}
+
+.cart_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    height: 42px;
+    background-color: #12B886;
+    border-radius: 12px 12px 0px 0px;
+    color: white;
+    padding-left: 15px;
+}
+
+/* Estilização Carrinho */
+
+.cart_render_box{
+    width: 350px;
+    min-height: 300px;
+    max-height: 350px;
+    margin-top: 10px;
+    overflow: scroll;
+}
+
+.cart_render_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.card_carrinho{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.div_esquerda{
+    width: 100px;
+    height: 90px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.img_carrinho{
+    width: 100px;
+    height: 90px;
+    border-radius: 8px;
+}
+
+.div_direita{
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.div1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+}
+
+.btn_excluir{
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    background-color: rgb(237, 233, 233);
+    border-radius: 5px;
+}
+
+.btn_excluir:hover{
+    transform: scale(1.2);
+}
+
+
+.secao_carrinho{
+    font-weight: 400;
+    font-size: 13px;
+    color: #868E96;
+}
+
+.preco_carrinho{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+.cart_box_quantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 348px;
+    height: 40px;
+    background: #F8F9FA;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cart_box_value{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 348px;
+    height: 40px;
+    background: #F8F9FA;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
