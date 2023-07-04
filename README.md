@@ -15,10 +15,12 @@ This project was developed in Module 2 of the FullStack course at Kenzie Academy
 - Figma
 
 ## Features
-- Filter by tags in searchBar (name)
+- Filter by tags in searchBar (name, category and section)
 - Filter by tags in navBar (sections)
 - Final price of rendered products
 - Show all products button
+- Shopping cart
+- Responsive layout
 
 ## References
 [Figma link here](https://www.figma.com/file/acejE0LYyc18yKUh8V1XS7/M2---S2-10-%7C-%F0%9F%8F%81-Entrega---JavaScript%3A-Lista-de-Produtos)
